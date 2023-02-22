@@ -10,43 +10,45 @@
 <body>
     <div id="welcome-page">
         <h1>Welcome to the Coding Quiz!</h1>
-        <button type="button">Start</button>
+        <button type="button" id="start">Start</button>
     </div>
+    <div id="timer"></div>
     <div id="question-one">
-        <h2>Question</h2>
+        <h2>Inside which HTML element do we put javascript?</h2>
         <ul>
-            <li>Answer Choice</li>
-            <li>Answer Choice</li>
-            <li>Answer Choice</li>
-            <li>Answer Choice</li>
+            <button class="first-correct">script</button>
+            <button class="incorrect">js</button>
+            <button class="incorrect">scriptinf</button>
+            <button class="incorrect">javascript</button>
         </ul>
     </div>
     <div id="question-two">
-        <h2>Question</h2>
+        <h2>Which variable takes precedence if both names are the same?</h2>
         <ul>
-            <li>Answer Choice</li>
-            <li>Answer Choice</li>
-            <li>Answer Choice</li>
-            <li>Answer Choice</li>
+            <button class="incorrect">global variable</button>
+            <button class="second-correct">local variable</button>
+            <button class="incorrect">both</button>
+            <button class="incorrect">none</button>
         </ul>
     </div>
     <div id="question-three">
-        <h2>Question</h2>
+        <h2>Which built-in method reverses the order of the elements of an array</h2>
         <ul>
-            <li>Answer Choice</li>
-            <li>Answer Choice</li>
-            <li>Answer Choice</li>
-            <li>Answer Choice</li>
+            <button class="incorrect">changeOrder(order)</button>
+            <button class="third-correct">reverse()</button>
+            <button class="incorrect">sort(order)</button>
+            <button class="incorrect">none of the above</button>
         </ul>
     </div>
     <div id="question-four">
-        <h2>Question</h2>
+        <h2>Can you edit CSS with Javascript</h2>
         <ul>
-            <li>Answer Choice</li>
-            <li>Answer Choice</li>
-            <li>Answer Choice</li>
-            <li>Answer Choice</li>
+            <button class="incorrect">No</button>
+            <button class="fourth-correct">yes</button>
         </ul>
+    </div>
+    <div id="game-over">
+        <h2>Game Over</h2>
     </div>
     <script src="script.js"></script>
 </body>
