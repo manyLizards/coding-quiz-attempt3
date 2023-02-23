@@ -24,4 +24,29 @@
 
 #timer {
     display: none;
+    font-size: 32px;
+}
+
+div {
+    text-align: center;
+}
+
+body {
+    background-color: #5000CE;
+}
+
+h2 {
+    font-size: 4em;
+}
+
+h1 {
+    font-size: 5em;
+}
+
+p {
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 3em;
 }
