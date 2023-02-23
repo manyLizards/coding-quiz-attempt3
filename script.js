@@ -9,14 +9,31 @@ var firstCorrect = document.querySelector('.first-correct');
 var secondCorrect = document.querySelector('.second-correct');
 var thirdCorrect = document.querySelector('.third-correct');
 var fourthCorrect = document.querySelector('.fourth-correct');
-var incorrect = document.querySelector('.incorrect');
+var incorrect = document.querySelectorAll('.incorrect');
+var timer = document.querySelector('#timer');
+var count = 75;
+var input = document.querySelector('#userInput');
+var score = 0;
 
-//when I click the start button, the timer starts and I am presented with a question
 startBtn.addEventListener("click", function() {
     welcomePage.style.display = "none";
     questionOne.style.display = "block";
-    setTimeout(endGame, 90000);
+    timer.style.display = "block";
+    var interval = setInterval(function() {
+        timer.innerHTML=count;
+        count--
+        if (count === 0) {
+            timer.style.display = "none";
+            endGame();
+        }
+    }, 1000)
 })
+
+incorrect.forEach(button => {
+    button.addEventListener("click", event => {
+    count -= 5;
+    timer.innerHTML = count;
+})})
 
 function endGame () {
     questionOne.style.display = "none";
@@ -26,10 +43,6 @@ function endGame () {
     welcomePage.style.display = "none";
     gameOver.style.display = "block";
 }
-
-incorrect.addEventListener("click", function() {
-    //subtract time from timer
-})
 
 firstCorrect.addEventListener("click", function () {
     questionOne.style.display = "none";
@@ -46,7 +59,6 @@ thirdCorrect.addEventListener("click", function () {
     questionFour.style.display = "block";
 })
 
-fourthCorrect.addEventListener("click", function () {
-    questionFour.style.display = "none";
-    gameOver.style.display = "block";
-})
+fourthCorrect.addEventListener("click", endGame)
+
+//use localstorage to keep scores
