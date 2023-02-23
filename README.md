@@ -27,6 +27,7 @@ This application has been deployed on github pages and can be interacted with at
 
 ## [**Usage**](#table-of-contents)
 Test your javascript knowledge with this short quiz!
+https://manylizards.github.io/coding-quiz-attempt3/
 
 ## [**License**](#table-of-contents)
 This project is licensed under the [MIT](https://opensource.org/licenses/MIT) license.
